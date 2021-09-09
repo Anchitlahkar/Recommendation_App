@@ -11,6 +11,7 @@ export default function Tabs() {
   return (
     <Tab.Navigator
       screenOptions={{
+        headerShown: false,
         headerStyle: {
           backgroundColor: 'black',
         },
@@ -23,7 +24,7 @@ export default function Tabs() {
       }}>
       {/* Home */}
       <Tab.Screen
-        name="Home"
+        name="Movie Recommended"
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -38,7 +39,7 @@ export default function Tabs() {
                   alignSelf: 'center',
                 }}
               />
-              <Text style={{ color: focused ? 'blue' : '#ffffff' }}>Home</Text>
+              <Text style={{ color: focused ? 'blue' : '#ffffff' }}>Recommended</Text>
             </View>
           ),
         }}
